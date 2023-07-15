@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+.emojiList{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 50px auto;
+  border: 10px solid #5AE4A7;
+  padding: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.emoji{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #1C2E35;
+  padding:10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.emoji:hover{
+  padding: 20px;
+}
+
+.emoji:hover .hover-content{
+  display: block;
+}
+
+.icon{
+  font-size: 75px;
+}
+
+@media  screen and (max-width:900px) {
+  .icon{
+    font-size: 50px;
+  }
+}
+
+@media  screen and (max-width:600px) {
+  .icon{
+    font-size: 25px;
+  }
+}
+
+.buttons{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-wrap: wrap;
+  width: max-content;
+  margin:50px auto;
 }
 
-.App-link {
-  color: #61dafb;
+button{
+  background-color: #5AE4A7;
+  padding:20px;
+  margin:5px;
+  border: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media  screen and (max-width:600px) {
+  button{
+    padding:9px;
+    margin: 0.5px;
   }
 }
+
+h1{
+  text-align: center;
+  color:#1C2E35;
+}
+
+.filter{
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom:40px;
+  margin-right: 50px;
+}
+
+.filter-Select{
+  font-size: 14px;
+  padding: 8px;
+  color:#1C2E35;
+  background-color: #5AE4A7;
+}
+
+.hover-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: max-content;
+  background-color:#5AE4A7;
+  color: #1C2E35;
+  padding: 20px;
+}
+
